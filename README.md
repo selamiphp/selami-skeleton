@@ -3,7 +3,7 @@
 ### Installation
 
 ```bash
-composer create-project selami\skeleton-app myApp
+composer create-project selami/skeleton-app myApp
 cd myApp
 cp config/autoload/local.php.dist config/autoload/local.php
 ```

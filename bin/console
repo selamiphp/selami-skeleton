@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+declare(strict_types=1);
+
+define('SELAMI_CONSOLE_PATH', dirname(__DIR__));
+
+require_once SELAMI_CONSOLE_PATH . '/vendor/autoload.php';
+
+use Selami\Console\ApplicationFactory;
+
+$container  = require SELAMI_CONSOLE_PATH . '/config/container.php';
+
+$cli = ApplicationFactory::makeApplication($container);
+$cli->run();

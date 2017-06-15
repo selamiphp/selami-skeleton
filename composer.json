@@ -1,0 +1,24 @@
+{
+    "name": "selami/skeleton-app",
+    "description": "Skeleton app that is built on selami/foundation",
+    "type": "project",
+    "require": {
+        "selami/foundation": "^0.3.0",
+        "symfony/http-foundation": "^3.3",
+        "selami/console": "^0.2.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mehmet Korkmaz",
+            "email": "mehmet@mkorkmaz.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "SelamiApp\\": "src/apps/www/controllers",
+            "SelamiApp\\Command\\": "src/commands"
+        }
+    }
+}

@@ -5,8 +5,6 @@ use Zend\ServiceManager\ServiceManager;
 use Selami\Router;
 use Psr\Http\Message\ServerRequestInterface;
 use Symfony\Component\HttpFoundation\Session\Session as SymfonySession;
-use Symfony\Component\HttpFoundation\Session\Storage\Handler\MemcachedSessionHandler;
-use Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage;
 use Zend\Config\Config as ZendConfig;
 use Selami\View\ViewInterface;
 

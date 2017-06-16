@@ -17,21 +17,15 @@ $container = new ServiceManager($config['dependencies']);
 $container->setService('commands', $config['commands']);
 $container->setService(ZendConfig::class, new ZendConfig($config));
 
-$container->setFactory(Memcached::class, function(){
-    $memcachedInstance = new Memcached();
-    $memcachedInstance->addServer('127.0.0.1', 11211,100);
-    return $memcachedInstance;});
+
 $container->setService(ServerRequestInterface::class, $request);
 $container->setFactory(
     SymfonySession::class, function () use ($container) {
-        ini_set('session.handler', 'memcached');
-        ini_set('session.save_path', 'localhost:11211');
         ini_set('session.use_cookies', '1');
         ini_set('session.use_only_cookies', '1');
         ini_set('session.cookie_httponly', '1');
         ini_set('session.name', 'SELAMISESSID');
-        $storage = new NativeSessionStorage(array(), new MemcachedSessionHandler($container->get(Memcached::class)));
-        return new SymfonySession($storage);
+        return new SymfonySession();
     }
 );
 if (isset($routes)) {

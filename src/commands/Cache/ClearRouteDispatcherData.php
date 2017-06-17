@@ -19,7 +19,7 @@ class ClearRouteDispatcherData extends SelamiCommand
     {
         $this
             ->setName('cache:clear-routes')
-            ->setDescription('Clears generated config file.');
+            ->setDescription('Clears generated routes data cache file.');
     }
 
     /**

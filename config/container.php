@@ -18,7 +18,7 @@ $container->setService(ZendConfig::class, new ZendConfig($config));
 
 $container->setService(ServerRequestInterface::class, $request);
 $container->setFactory(
-    SymfonySession::class, function () use ($container) {
+    SymfonySession::class, function () {
         ini_set('session.use_cookies', '1');
         ini_set('session.use_only_cookies', '1');
         ini_set('session.cookie_httponly', '1');

@@ -11,7 +11,7 @@ cp config/autoload/local.php.dist config/autoload/local.php
 ### Testing locally
 
 ```bash
-php -S 127.0.0.1:8080 -t public/
+bin/console server:run
 ```
 
 ### Available routes with the default installation:

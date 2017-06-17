@@ -2,12 +2,12 @@
 declare(strict_types=1);
 
 return [
-    'config_cache_enabled' => false,
+    'config_cache_enabled' => true,
     'app' => [
-        'templates_dir' => APP_DIR .'/templates',
-        'cache_dir' => '/tmp',
+        'templates_dir' =>  './src/apps/www/templates',
+        'cache_dir' => './cache/twig',
         'debug' => false,
         'auto_reload' => false,
-        'cache_file' => '/tmp/fastroute.cache'
+        'cache_file' => './cache/fastroute.cache'
     ]
 ];

@@ -8,7 +8,6 @@ use Symfony\Component\Console\Exception\CommandNotFoundException;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\ArrayInput;
-use Zend\Config\Config;
 use Symfony\Component\Console\Exception\InvalidArgumentException;
 
 class ClearAll extends SelamiCommand

@@ -28,8 +28,10 @@ class ClearRouteDispatcherData extends SelamiCommand
     protected function execute(InputInterface $input, OutputInterface $output) : void
     {
         $config = $this->container->get(Config::class);
-        $routeCahceFile = $config->app->get('cache_file', '');
-        $unlinkResult  =  (unlink($routeCahceFile) === True) ? 'deleted.':'could\'t deleted';
-        $output->writeln($routeCahceFile . ' ' . $unlinkResult );
+        $routeCacheFile = $config->app->get('cache_file', '');
+        $unlinkResult  =  file_exists($routeCacheFile)
+            ? unlink($routeCacheFile) ? 'deleted.' : 'could\'t deleted'
+            : 'does not exist!';
+        $output->writeln($routeCacheFile . ' ' . $unlinkResult );
     }
 }

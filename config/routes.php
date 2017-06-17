@@ -9,10 +9,7 @@ $router = new Router(
     $request->getUri()->getPath()
 );
 
-
-foreach ($routes as $route) {
+foreach ((array) $routes as $route) {
     $router->add($route[0], $route[1], $route[2], $route[3], $route[4]??'');
 }
-
-
 return $router;

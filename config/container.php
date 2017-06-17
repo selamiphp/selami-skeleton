@@ -28,9 +28,11 @@ $container->setFactory(
 );
 if (isset($routes)) {
     $router = new Router(
-        $config['default_return_type'] ?? 'html',
+        $config['app']['default_return_type'] ?? 'html',
         $request->getMethod(),
-        $request->getUri()->getPath()
+        $request->getUri()->getPath(),
+        '',
+        $config['app']['cache_file']
     );
     foreach ($routes as $route) {
         $router->add($route[0], $route[1], $route[2], $route[3], $route[4]??'');

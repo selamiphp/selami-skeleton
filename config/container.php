@@ -43,9 +43,9 @@ if (isset($routes)) {
 
 $container->setFactory(
     TwigEnvironment::class, function () use ($config) {
-    $loader = new Twig\Loader\FilesystemLoader($config['app']['templates_dir']);
-    return new TwigEnvironment($loader, $config['app']);
-}
+        $loader = new Twig\Loader\FilesystemLoader($config['app']['templates_dir']);
+        return new TwigEnvironment($loader, $config['app']);
+    }
 );
 
 

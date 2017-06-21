@@ -25,8 +25,8 @@ class ServerRun extends SelamiCommand
     {
         $this
             ->setName('server:run')
-            ->addOption('host',null, InputOption::VALUE_OPTIONAL, 'Hostname of the site', '127.0.0.1')
-            ->addOption('public',null, InputOption::VALUE_OPTIONAL, 'Public web root.', './public')
+            ->addOption('host', null, InputOption::VALUE_OPTIONAL, 'Hostname of the site', '127.0.0.1')
+            ->addOption('public', null, InputOption::VALUE_OPTIONAL, 'Public web root.', './public')
             ->setDescription('Run web server locally');
     }
 

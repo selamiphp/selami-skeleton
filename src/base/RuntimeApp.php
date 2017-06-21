@@ -8,7 +8,7 @@ class RuntimeApp
     private $language;
     private $type;
 
-    public function  __construct(string $type, string $language = 'en')
+    public function __construct(string $type, string $language = 'en')
     {
         $this->language = $language;
         $this->type = $type;

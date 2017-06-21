@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a547b979287ffa827e0b6cf9a220ac97",
+    "content-hash": "669478b5067f6d1736d329920c0e4018",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -318,23 +318,23 @@
         },
         {
             "name": "selami/foundation",
-            "version": "0.4",
+            "version": "0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/selamiphp/foundation.git",
-                "reference": "8989e3379bcb10aafa581ad948029eabd9014196"
+                "reference": "cc37aff075aaf6e031089f940aeae44664f32f1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/selamiphp/foundation/zipball/8989e3379bcb10aafa581ad948029eabd9014196",
-                "reference": "8989e3379bcb10aafa581ad948029eabd9014196",
+                "url": "https://api.github.com/repos/selamiphp/foundation/zipball/cc37aff075aaf6e031089f940aeae44664f32f1e",
+                "reference": "cc37aff075aaf6e031089f940aeae44664f32f1e",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1",
                 "psr/container": "^1.0",
                 "selami/router": "^0.3",
-                "selami/views": "^0.1",
+                "selami/views": "^0.2",
                 "zendframework/zend-config": "^3.1",
                 "zendframework/zend-diactoros": "^1.3",
                 "zendframework/zend-servicemanager": "^3.0"
@@ -371,7 +371,7 @@
                 "micro framework",
                 "twig"
             ],
-            "time": "2017-06-17T05:32:09+00:00"
+            "time": "2017-06-21T11:28:20+00:00"
         },
         {
             "name": "selami/router",
@@ -425,28 +425,30 @@
         },
         {
             "name": "selami/views",
-            "version": "0.1.1",
+            "version": "0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/selamiphp/views.git",
-                "reference": "63e320765964328d6794e96ec44c0a7c0e56b783"
+                "reference": "4a66c104b3cedbb00ce7f81c9da8036775710fc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/selamiphp/views/zipball/63e320765964328d6794e96ec44c0a7c0e56b783",
-                "reference": "63e320765964328d6794e96ec44c0a7c0e56b783",
+                "url": "https://api.github.com/repos/selamiphp/views/zipball/4a66c104b3cedbb00ce7f81c9da8036775710fc3",
+                "reference": "4a66c104b3cedbb00ce7f81c9da8036775710fc3",
                 "shasum": ""
             },
             "require": {
                 "mattketmo/camel": "~1.1",
                 "php": "^7.0",
-                "twig/extensions": "^1.4",
-                "twig/twig": "^2.0"
+                "psr/container": "^1.0",
+                "twig/extensions": "^1.5",
+                "twig/twig": "^2.4"
             },
             "require-dev": {
-                "phpunit/phpcov": "^3.1.0",
-                "phpunit/phpunit": "^5.4.0",
-                "satooshi/php-coveralls": "~1.0"
+                "phpunit/phpcov": "^4.0",
+                "phpunit/phpunit": "^6.0",
+                "satooshi/php-coveralls": "~1.0",
+                "zendframework/zend-servicemanager": "^3.3"
             },
             "suggest": {
                 "latte/latte": "~2.4.2 for Latte Templating Engine",
@@ -482,7 +484,7 @@
                 "twig",
                 "view"
             ],
-            "time": "2017-01-05T21:13:59+00:00"
+            "time": "2017-06-21T11:16:29+00:00"
         },
         {
             "name": "symfony/console",

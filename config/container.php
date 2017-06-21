@@ -7,7 +7,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Symfony\Component\HttpFoundation\Session\Session as SymfonySession;
 use Zend\Config\Config as ZendConfig;
 use Selami\View\ViewInterface;
-
+use Twig\Environment as TwigEnvironment;
 $config = include __DIR__ . '/config.php';
 $request = Selami\Http\ServerRequestFactory::fromGlobals($_SERVER, $_GET, $_POST, $_COOKIE, $_FILES);
 $container = new ServiceManager($config['dependencies']);
@@ -41,8 +41,18 @@ if (isset($routes)) {
 }
 
 $container->setFactory(
-    ViewInterface::class, function () use ($config, $request) {
-        return new Selami\View\Twig\Twig($config['app'], $request->getParams());
+    TwigEnvironment::class, function () use ($config) {
+    $loader = new Twig\Loader\FilesystemLoader($config['app']['templates_dir']);
+    return new TwigEnvironment($loader, $config['app']);
+}
+);
+
+
+$container->setFactory(
+    ViewInterface::class, function ($container) use ($config, $request) {
+
+        $config['app']['query_parameters'] =  $request->getParams();
+        return Selami\View\Twig\Twig::viewFactory($container, $config['app']);
     }
 );
 return $container;

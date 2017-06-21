@@ -4,9 +4,9 @@
     "type": "project",
     "require": {
         "php": "^7.1",
-        "selami/foundation": "^0.4",
+        "selami/foundation": "^0.5",
         "symfony/http-foundation": "^3.3",
-        "selami/console": "^0.2.1",
+        "selami/console": "^0.2",
         "symfony/process": "^3.3"
     },
     "license": "MIT",

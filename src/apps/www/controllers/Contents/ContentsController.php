@@ -2,9 +2,9 @@
 declare(strict_types=1);
 
 
-namespace SelamiApp\Contents;
+namespace SelamiApp\Controller\Contents;
 
-use SelamiApp\Application;
+use SelamiApp\Controller\Application;
 use Selami\Interfaces\Application as App;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ServerRequestInterface;

@@ -1,10 +1,12 @@
 <?php
 declare(strict_types=1);
 
-use SelamiApp as c;
+use SelamiApp\Controller;
 
 return [
-    ['get', '/', c\Contents\Main::class, 'html', 'home'],
-    ['get', '/category/{category}', c\Contents\Category::class, 'html', 'category'],
-    ['get', '/{year}/{month}/{slug}', c\Contents\Post::class, 'json', 'post']
+    ['get', '/', Controller\Contents\Main::class, 'html', 'home'],
+    ['get', '/{lang}', Controller\Contents\Main::class, 'html', 'home'],
+    ['get', '/{lang}/category/{category}', Controller\Contents\Category::class, 'html', 'category'],
+    ['get', '/{lang}/{year}/{month}/{slug}', Controller\Contents\Post::class, 'json', 'post'],
+    ['get', '/{catchAnythingElse:.+}',  Controller\Contents\NotFound::class, 'html', '404'],
 ];

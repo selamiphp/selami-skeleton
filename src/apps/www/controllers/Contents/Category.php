@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 
-namespace SelamiApp\Contents;
+namespace SelamiApp\Controller\Contents;
 
 use Psr\Container\ContainerInterface;
 use Selami\Interfaces\Application;

@@ -19,8 +19,11 @@
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "SelamiApp\\": "src/apps/www/controllers",
-            "SelamiApp\\Command\\": "src/commands"
+            "SelamiApp\\Controller\\": "src/apps/www/controllers",
+            "SelamiApp\\Command\\": "src/commands",
+            "SelamiApp\\Extension\\": "src/extensions",
+            "SelamiApp\\": "src/base"
+
         }
     }
 }

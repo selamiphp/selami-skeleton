@@ -4,7 +4,11 @@ declare(strict_types=1);
 use Zend\Stdlib\ArrayUtils;
 use Zend\Stdlib\Glob;
 
-$cachedConfigFile = dirname(__DIR__) . '/cache/app_config.php';
+$siteBasedConfig = '';
+if (defined('RUNTIME_PLATFORM')) {
+    $siteBasedConfig = RUNTIME_PLATFORM.'_';
+}
+$cachedConfigFile = dirname(__DIR__) . '/cache/'.$siteBasedConfig.'app_config.php';
 
 $config = [];
 
@@ -14,9 +18,14 @@ if (is_file($cachedConfigFile)) {
     foreach (Glob::glob(__DIR__ . '/autoload/{{,*.}global,{,*.}local}.php', Glob::GLOB_BRACE) as $file) {
         $config = ArrayUtils::merge($config, include $file);
     }
+    if (defined('RUNTIME_PLATFORM')) {
+        $config = ArrayUtils::merge($config, include __DIR__ . '/sites/'.RUNTIME_PLATFORM.'.config.php');
+    }
     if (isset($config['config_cache_enabled']) && $config['config_cache_enabled'] === true) {
         file_put_contents($cachedConfigFile, json_encode($config));
     }
 }
-
+if (defined('RUNTIME_LANG')) {
+    $config = ArrayUtils::merge($config, include __DIR__ . '/lang/' . RUNTIME_LANG . '.php');
+}
 return $config;

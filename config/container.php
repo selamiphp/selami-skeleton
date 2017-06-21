@@ -8,6 +8,7 @@ use Symfony\Component\HttpFoundation\Session\Session as SymfonySession;
 use Zend\Config\Config as ZendConfig;
 use Selami\View\ViewInterface;
 use Twig\Environment as TwigEnvironment;
+use SelamiApp\Extension\Twig\Extensions as TwigExtensions;
 $config = include __DIR__ . '/config.php';
 $request = Selami\Http\ServerRequestFactory::fromGlobals($_SERVER, $_GET, $_POST, $_COOKIE, $_FILES);
 $container = new ServiceManager($config['dependencies']);
@@ -50,8 +51,9 @@ $container->setFactory(
 
 $container->setFactory(
     ViewInterface::class, function ($container) use ($config, $request) {
-
         $config['app']['query_parameters'] =  $request->getParams();
+        $extensions = new TwigExtensions($container->get(TwigEnvironment::class));
+        $extensions->translator($config['lang']??[]);
         return Selami\View\Twig\Twig::viewFactory($container, $config['app']);
     }
 );

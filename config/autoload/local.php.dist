@@ -4,7 +4,6 @@ declare(strict_types=1);
 return [
     'config_cache_enabled' => true,
     'app' => [
-        'templates_dir' =>  './src/apps/www/templates',
         'cache_dir' => './cache/twig',
         'debug' => false,
         'auto_reload' => false,

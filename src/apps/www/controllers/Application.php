@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 
-namespace SelamiApp;
+namespace SelamiApp\Controller;
 
 use Psr\Container\ContainerInterface as Container;
 use Symfony\Component\HttpFoundation\Session\Session as SymfonySession;

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "669478b5067f6d1736d329920c0e4018",
+    "content-hash": "1c94dac079f9eee0556879639f86dfea",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -318,22 +318,22 @@
         },
         {
             "name": "selami/foundation",
-            "version": "0.5",
+            "version": "0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/selamiphp/foundation.git",
-                "reference": "cc37aff075aaf6e031089f940aeae44664f32f1e"
+                "reference": "d88bd6e495ad0af987639fe159e9c157d40e3ed2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/selamiphp/foundation/zipball/cc37aff075aaf6e031089f940aeae44664f32f1e",
-                "reference": "cc37aff075aaf6e031089f940aeae44664f32f1e",
+                "url": "https://api.github.com/repos/selamiphp/foundation/zipball/d88bd6e495ad0af987639fe159e9c157d40e3ed2",
+                "reference": "d88bd6e495ad0af987639fe159e9c157d40e3ed2",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1",
                 "psr/container": "^1.0",
-                "selami/router": "^0.3",
+                "selami/router": "^0.4",
                 "selami/views": "^0.2",
                 "zendframework/zend-config": "^3.1",
                 "zendframework/zend-diactoros": "^1.3",
@@ -371,20 +371,20 @@
                 "micro framework",
                 "twig"
             ],
-            "time": "2017-06-21T11:28:20+00:00"
+            "time": "2017-06-30T12:35:00+00:00"
         },
         {
             "name": "selami/router",
-            "version": "0.3.1",
+            "version": "0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/selamiphp/router.git",
-                "reference": "c704697a081aa3d3dacaf6e5a3ac40225a9066a4"
+                "reference": "a98a471ef70cb611db3a96b2310974548de62af7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/selamiphp/router/zipball/c704697a081aa3d3dacaf6e5a3ac40225a9066a4",
-                "reference": "c704697a081aa3d3dacaf6e5a3ac40225a9066a4",
+                "url": "https://api.github.com/repos/selamiphp/router/zipball/a98a471ef70cb611db3a96b2310974548de62af7",
+                "reference": "a98a471ef70cb611db3a96b2310974548de62af7",
                 "shasum": ""
             },
             "require": {
@@ -421,7 +421,7 @@
                 "Selami",
                 "router"
             ],
-            "time": "2017-06-17T06:10:13+00:00"
+            "time": "2017-06-30T08:35:48+00:00"
         },
         {
             "name": "selami/views",

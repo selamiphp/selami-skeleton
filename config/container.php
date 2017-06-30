@@ -29,7 +29,7 @@ $container->setFactory(
 );
 if (isset($routes)) {
     $router = new Router(
-        $config['app']['default_return_type'] ?? 'html',
+        $config['app']['default_return_type'] ?? Router::HTML,
         $request->getMethod(),
         $request->getUri()->getPath(),
         '',

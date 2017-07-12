@@ -18,9 +18,10 @@ before_script:
     # Define vars.
     - export PUBLIC_DIR=public/site1
     - export CEPT_SERVER='127.0.0.1:8080'
+    - cp config/autoload/local.php.dist config/autoload/local.php
+
     # Start up a web server.
     - php -S "$WP_CEPT_SERVER" -t "$WP_CORE_DIR" >/dev/null 2>&1 &
-    - cp config/autoload/local.php.dist config/autoload/local.php
     - composer install --prefer-source
 
 script:

@@ -9,6 +9,9 @@
         "selami/console": "~0.2",
         "symfony/process": "~3.3"
     },
+    "require-dev": {
+        "codeception/codeception": "2.3.4"
+    },
     "license": "MIT",
     "authors": [
         {

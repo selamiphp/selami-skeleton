@@ -9,7 +9,7 @@ php:
 before_script:
     - cp config/autoload/local.php.dist config/autoload/local.php
     - ls config/autoload
-    - composer install --prefer-source
+    - composer install -o --prefer-dist
     - php -S 127.0.0.1:8080 -t public/site1 >/dev/null 2>&1 &
 
 script:

@@ -8,7 +8,7 @@ use Selami\Interfaces\Application;
 
 class NotFound extends ContentsController implements Application
 {
-    public function respond() : array
+    public function __invoke() : array
     {
         return ['status' => 404, 'data' => ['t' => 'Main']];
     }

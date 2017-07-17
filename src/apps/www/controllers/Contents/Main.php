@@ -8,8 +8,8 @@ use Selami\Interfaces\Application;
 
 class Main extends ContentsController implements Application
 {
-    public function respond() : array
+    public function __invoke() : array
     {
-        return ['status' => 200, 'data' => ['t' => 'Main']];
+        return ['status' => 200, 'data' => ['t' => self::class]];
     }
 }

@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
-$_appLang = 'tr';
-if (strpos($_SERVER['REQUEST_URI'], '/en') === 0) {
-    $_appLang = 'en';
+$_appLang = 'en';
+if (strpos($_SERVER['REQUEST_URI'], '/tr') === 0) {
+    $_appLang = 'tr';
 }
 define('RUNTIME_PLATFORM', 'site1');
 define('RUNTIME_LANG', $_appLang);

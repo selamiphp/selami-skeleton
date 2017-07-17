@@ -9,7 +9,12 @@ use Zend\Config\Config as ZendConfig;
 use Selami\View\ViewInterface;
 use Twig\Environment as TwigEnvironment;
 use SelamiApp\Extension\Twig\Extensions as TwigExtensions;
+use Selami\Stdlib\BaseUrlExtractor;
+
 $config = include __DIR__ . '/config.php';
+if (PHP_SAPI !== 'cli') {
+    $config ['app']['base_url'] = BaseUrlExtractor::getBaseUrl($_SERVER);
+}
 $request = Selami\Http\ServerRequestFactory::fromGlobals($_SERVER, $_GET, $_POST, $_COOKIE, $_FILES);
 $container = new ServiceManager($config['dependencies']);
 
@@ -28,23 +33,30 @@ $container->setFactory(
     }
 );
 if (isset($routes)) {
-    $router = new Router(
-        $config['app']['default_return_type'] ?? Router::HTML,
-        $request->getMethod(),
-        $request->getUri()->getPath(),
-        '',
-        $config['app']['cache_file']
-    );
-    foreach ($routes as $route) {
-        $router->add($route[0], $route[1], $route[2], $route[3], $route[4]??'');
-    }
-    $container->setService(Router::class, $router);
+
+    $container->setFactory(Router::class, function() use ($routes, $request, $config){
+
+        $router = new Router(
+            $config['app']['default_return_type'] ?? Router::HTML,
+            $request->getMethod(),
+            $request->getUri()->getPath(),
+            '',
+            $config['app']['cache_file']
+        );
+        foreach ($routes as $route) {
+            $router->add($route[0], $route[1], $route[2], $route[3], $route[4]??'');
+        }
+
+        return $router;
+    });
 }
 
 $container->setFactory(
     TwigEnvironment::class, function () use ($config) {
         $loader = new Twig\Loader\FilesystemLoader($config['app']['templates_dir']);
-        return new TwigEnvironment($loader, $config['app']);
+        $twig = new TwigEnvironment($loader, $config['app']['twig']);
+        $twig->addGlobal('lang', RUNTIME_LANG);
+        return $twig;
     }
 );
 
@@ -54,6 +66,7 @@ $container->setFactory(
         $config['app']['query_parameters'] =  $request->getParams();
         $extensions = new TwigExtensions($container->get(TwigEnvironment::class));
         $extensions->translator($config['lang']??[]);
+
         return Selami\View\Twig\Twig::viewFactory($container, $config['app']);
     }
 );

@@ -1,0 +1,144 @@
+
+body {
+    font-family: Muli, "Open Sans", "Helvetica Neue", "sans-serif";
+    font-size:18px;
+    line-height:30px;
+    color:#333;
+}
+
+.container h1, .container h2, .container h3, .container h4, .container h5 {
+    font-family: "Open Sans","Helvetica Neue", "sans-serif";
+    font-weight: 500;
+    text-align: center;
+    color: #4f5d95;
+}
+.container h1 {
+    font-size:28px;
+    line-height: 40px;
+}
+
+.container h2 {
+    font-size:22px;
+    line-height: 40px;
+}
+.container h5 {
+    font-size:16px;
+    line-height: 18px;
+    color: #999;
+}
+.container h4 {
+
+    font-size:20px;
+}
+div.title {
+    margin-top:40px;
+    margin-bottom:40px;
+}
+header.home{
+    width:100%;
+    background-image:url('../img/bg.jpg');
+    height:300px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-position-x: 50%;
+    background-position-y: 55%;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+a, a:visited {
+    color: #4f5d95;
+}
+a:hover {
+    color: #404358;
+}
+
+
+ul li span.info {
+    float:right;
+    font-size:12px;
+    color:#999;
+}
+.social-media-links {
+    text-align: center;
+    font-size: 32px;
+    color: #404358;
+}
+.social-media-links a {
+    color: #333;
+    letter-spacing: 10px;
+}
+
+footer .container {
+    margin-top:0px;
+    margin-bottom:20px;
+    font-size: 12px;
+    text-align: center;
+    color: #999;
+}
+.content_lists ul li span.info {
+    text-align: right;
+    width: 10px;
+    overflow: hidden;
+}
+
+.content_lists hr {
+    width: 100px;
+    clear: both;
+    margin-top: 40px;
+    color: #fefefe;
+}
+
+.content_detail a, .content_detail a:visited {
+    color: #999;
+}
+.content_detail a:hover {
+     color: #A7315B;
+ }
+
+.navbar-default {
+    background-color: transparent;
+    border: 0;
+
+}
+
+.navbar-default .navbar-nav li a, .navbar-default a.navbar-brand{
+    color: #404358;
+}
+.navbar-default .navbar-nav li.active a{
+    background-color: transparent;
+    border-bottom: 2px solid silver;
+    color: #404358;
+    border-color: #404358;
+    padding-bottom: 3px;
+}
+
+
+a, a:visited {
+    color: #4f5d95;
+}
+a:hover {
+    color: #404358;
+}
+
+.navbar a {
+    color: #404358;
+}
+.social-media-links {
+    text-align: center;
+    font-size: 32px;
+    color: #404358;
+}
+.social-media-links a {
+    color: #333;
+    letter-spacing: 10px;
+}
+
+footer .container {
+    margin-top:0px;
+    margin-bottom:20px;
+    font-size: 12px;
+    text-align: center;
+    color:#999;
+}

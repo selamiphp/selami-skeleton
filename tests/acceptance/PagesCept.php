@@ -6,12 +6,12 @@ $I = new AcceptanceTester($scenario);
 
 
 $I->wantTo('See home page loaded successfully');
-$I->amOnPage('/');
-$I->see('Selami Ana Sayfa');
+$I->amOnPage('/tr');
+$I->see('Ana Sayfa');
 
 $I->wantTo('See home page loaded successfully for English');
-$I->amOnPage('/en');
-$I->see(' Selami Home ');
+$I->amOnPage('/');
+$I->see('Home ');
 
 $I->wantTo('Get JSON data loaded successfully');
 $I->sendAjaxGetRequest('/tr/basvuru/bilgiler/3');

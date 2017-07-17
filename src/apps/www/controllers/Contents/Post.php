@@ -8,7 +8,7 @@ use Selami\Interfaces\Application;
 class Post extends ContentsController implements Application
 {
 
-    public function respond() : array
+    public function __invoke() : array
     {
         $count = $this->session->get('count', 0);
         $count++;

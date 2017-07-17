@@ -1,3 +1,159 @@
-{{ translate('Home') }}
-<hr>
-{{ t }}
+<div class="container">
+    <div class="jumbotron">
+        <h1>Welcome to <strong>Selami App</strong></h1>
+        <p>
+            If you see this page without any warning, this means you have successfully installed the
+            <a href="https://github.com/selamiphp/skeletona-app" target="_blank">Selami skeleton application</a>.
+            Use this skeleton to build your application.
+        </p>
+        <p>
+            SelamiApp is an Selami Micro Framework application written in PHP 7.1.
+            It depends on Zend Service Manager, Zend Diactoros,  Zend Config,
+            Nikita Popov's FastRoute, Symfony Console.
+        </p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h2>
+                <a href="https://docs.zendframework.com/zend-expressive/features/container/intro/" target="_blank">
+                    <i class="fa fa-cube"></i> Dependency Injection Container
+                </a>
+            </h2>
+            <p>
+                Selami uses PSR-11 Compatible Dependency Injection Containers. SelamiApp is build using Zend Service Manager.
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h2>
+                <a href="https://docs.zendframework.com/zend-expressive/getting-started/features/" target="_blank">
+                    <i class="fa fa-magic"></i> Auto-witing
+                </a>
+            </h2>
+            <p>
+                Selami Framework automatically calls your controller using Type Hints when defined the constructor of Controller Classes.
+                Determining type hints and instantiating of controller class is done by Reflection API of PHP Core.
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h2>
+                <a href="https://github.com/zendframework/zend-stratigility" target="_blank">
+                    <i class="fa fa-dot-circle-o"></i> Middleware
+                </a>
+            </h2>
+            <p>
+                Selami Framework supports PSR-7 Compatible Middlewares. You can use SelamiApp in your Middleware Stacks.
+            </p>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <h2>
+                <a href="https://github.com/zendframework/zend-diactoros" target="_blank">
+                    <i class="fa fa-exchange"></i> PSR-7 Messaging
+                </a>
+            </h2>
+            <p>
+                Selami Framework is built on Zend Diactoros. You can use ServerRequestInterface methods to interact request data in your application.
+            </p>
+        </div>
+
+
+
+        <div class="col-md-4">
+            <h2>
+                <a href="https://docs.zendframework.com/zend-expressive/features/router/intro/" target="_blank">
+                    <i class="fa fa-random"></i> Routing
+                </a>
+            </h2>
+            <p>
+                Selami Framework is build on Nikita Popov's FastRoute router. You can use it's syntax to define your routes.
+            </p>
+        </div>
+
+        <div class="col-md-4">
+            <h2>
+                <a href="https://docs.zendframework.com/zend-expressive/features/template/twig/" target="_blank">
+                    <i class="fa fa-code"></i> Templating
+                </a>
+            </h2>
+            <p>
+                By default, Selami Framework uses Twig. Other templating engines will be enabled in near future.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <h1>Some Commands</h1>
+        Command to run sample application. If you see this page, you probably already run this command.
+        <pre>
+            <code class="language-bash command-line">
+                bin/console server:run --public=public/site1
+            </code>
+        </pre>
+        SelamiApp may generates cache files for configuration and route data. To clear cache you can use this command:
+        <pre>
+            <code class="language-bash command-line">
+                bin/console cache:clear-all
+            </code>
+        </pre>
+        Clear only config cache
+        <pre>
+            <code class="language-bash command-line">
+                bin/console cache:clear-config
+            </code>
+        </pre>
+        Clear only routing cache
+        <pre>
+            <code class="language-bash command-line">
+                bin/console cache:clear-route
+            </code>
+        </pre>
+        <h1>Sample Controller</h1>
+        Let's say you added a controller SelamiApp\Controller\MyModule\Main  to call when page requested using this route /my-module/{name}
+        <pre><code class="language-php  line-numbers">
+
+                &lt;?php
+declare(strict_types=1);
+
+namespace SelamiApp\Controller\MyModule;
+
+use Selami\Interfaces\Application;
+use Psr\Http\Message\ServerRequestInterface;
+
+class Main implements Application
+{
+    private $request;
+    private $args;
+    public function __construct(ServerRequestInterface $request, array $args)
+    {
+         $this->request = $request;
+         $this->args = $args;
+    }
+
+    public function __invoke() : array
+    {
+        $name = $this->args['name'] ?? '';
+        $queryParameterForGreeting = $this->request->getParam('greeting', 'Hello');
+        $greeting  = $queryParameterForGreeting . ' ' . $name;
+        return [
+                'status' => 200,
+                'data' => [
+                    'class_name' => self::class,
+                    'name' => $name,
+                    'requested_greeting' => $queryParameterForGreeting,
+                    'greeting' => $greeting
+
+                ]
+        ];
+    }
+}
+            </code></pre>
+        <hr>
+        {{ t }}
+
+    </div>
+</div>
+
+<link href="{{ siteUrl() }}/assets/css/prism.css" rel="stylesheet" crossorigin="anonymous">
+<script src="{{ siteUrl() }}/assets/js/prism.js"></script>

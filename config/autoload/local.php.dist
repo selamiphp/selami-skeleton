@@ -4,9 +4,11 @@ declare(strict_types=1);
 return [
     'config_cache_enabled' => true,
     'app' => [
-        'cache_dir' => './cache/twig',
-        'debug' => false,
-        'auto_reload' => false,
+        'twig' => [
+            'cache' => './cache/twig',
+            'debug' => false,
+            'auto_reload' => true
+        ],
         'cache_file' => './cache/fastroute.cache'
     ]
 ];

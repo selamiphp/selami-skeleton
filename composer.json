@@ -35,5 +35,13 @@
             "SelamiApp\\": "src/base"
 
         }
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "composer dump-autoload -o"
+        ],
+        "post-create-project-cmd": [
+            "composer dump-autoload -o"
+        ]
     }
 }

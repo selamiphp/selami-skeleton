@@ -6,14 +6,13 @@
 
 ```bash
 composer create-project selami/selami-skeleton myApp
-cd myApp
-cp config/autoload/local.php.dist config/autoload/local.php
 ```
 
 ### Testing locally
 
 ```bash
-bin/console server:run
+cd myApp
+bin/console server:run --public=public/site1
 ```
 
 ### Available routes with the default installation:

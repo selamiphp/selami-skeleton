@@ -28,7 +28,7 @@ class ClearConfig extends SelamiCommand
     protected function execute(InputInterface $input, OutputInterface $output) : void
     {
         $cachedConfigFiles = glob('./cache/*app_config.php');
-        foreach ($cachedConfigFiles as $cachedConfigFile){
+        foreach ($cachedConfigFiles as $cachedConfigFile) {
             $unlinkResult  =  file_exists($cachedConfigFile)
                 ? (unlink($cachedConfigFile) === true) ? 'deleted.':'could\'t deleted'
                 :' file does not exist';

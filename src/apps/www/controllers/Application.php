@@ -26,6 +26,4 @@ abstract class Application
      * @var ServerRequestInterface
      */
     protected $request;
-
-
 }

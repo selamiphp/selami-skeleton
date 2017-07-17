@@ -14,7 +14,6 @@ use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Exception\RuntimeException;
 use Symfony\Component\Process\Exception\InvalidArgumentException as ProcessInvalidArgumentException;
 
-
 class ServerRun extends SelamiCommand
 {
     /**

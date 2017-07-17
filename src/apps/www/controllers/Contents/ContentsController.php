@@ -10,7 +10,6 @@ use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Symfony\Component\HttpFoundation\Session\Session;
 
-
 abstract class ContentsController extends Application
 {
 
@@ -27,5 +26,4 @@ abstract class ContentsController extends Application
         $request = $container->get(ServerRequestInterface::class);
         return new static($request, $session, $args);
     }
-
 }

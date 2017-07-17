@@ -21,8 +21,4 @@ class Post extends ContentsController implements Application
             ]
         ];
     }
-
-
-
-
 }

@@ -5,7 +5,6 @@ namespace SelamiApp\Controller\Contents;
 
 use Selami\Interfaces\Application;
 
-
 class Main extends ContentsController implements Application
 {
     public function __invoke() : array

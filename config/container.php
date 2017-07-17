@@ -13,7 +13,7 @@ use Selami\Stdlib\BaseUrlExtractor;
 
 $config = include __DIR__ . '/config.php';
 if (PHP_SAPI !== 'cli') {
-    $config ['app']['base_url'] = BaseUrlExtractor::getBaseUrl($_SERVER);
+    $config['app']['base_url'] = BaseUrlExtractor::getBaseUrl($_SERVER);
 }
 $request = Selami\Http\ServerRequestFactory::fromGlobals($_SERVER, $_GET, $_POST, $_COOKIE, $_FILES);
 $container = new ServiceManager($config['dependencies']);

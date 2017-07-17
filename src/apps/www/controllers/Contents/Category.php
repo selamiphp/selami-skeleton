@@ -9,11 +9,10 @@ use Selami\Interfaces\Application;
 
 use Psr\Http\Message\ServerRequestInterface;
 
-class Category  extends ContentsController implements Application
+class Category extends ContentsController implements Application
 {
     public function __invoke() : array
     {
         return ['status' => 200, 'data' => ['t' => 'Category:'. $this->args['category']]];
     }
-
 }

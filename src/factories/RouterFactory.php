@@ -18,7 +18,7 @@ class RouterFactory implements FactoryInterface
      * @var Router
      */
     private $router;
-    
+
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
         /**

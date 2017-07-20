@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 return [
-    'runtime_lang' => defined('RUNTIME_LANG') ?? '',
-    'runtime_platform' => defined('RUNTIME_PLATFORM') ?? ''
+    'runtime_lang' => defined('RUNTIME_LANG') ? RUNTIME_LANG : '',
+    'sys_dir' => defined('SYS_DIR') ? SYS_DIR : '',
+
 ];

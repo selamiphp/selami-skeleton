@@ -273,34 +273,33 @@
         },
         {
             "name": "selami/foundation",
-            "version": "0.9.1",
+            "version": "0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/selamiphp/foundation.git",
-                "reference": "d65b07e4bc8deb6dc352db6e39a287dc5b77211a"
+                "reference": "008a64d8245885cfa626f733d8d01ad606529046"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/selamiphp/foundation/zipball/d65b07e4bc8deb6dc352db6e39a287dc5b77211a",
-                "reference": "d65b07e4bc8deb6dc352db6e39a287dc5b77211a",
+                "url": "https://api.github.com/repos/selamiphp/foundation/zipball/008a64d8245885cfa626f733d8d01ad606529046",
+                "reference": "008a64d8245885cfa626f733d8d01ad606529046",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1",
                 "psr/container": "^1.0",
                 "selami/router": "^0.6",
-                "selami/stdlib": "^1.2",
+                "selami/stdlib": "^1.3",
                 "selami/views": "~0.4",
-                "zendframework/zend-config": "^3.1",
-                "zendframework/zend-diactoros": "^1.3",
-                "zendframework/zend-servicemanager": "^3.0"
+                "zendframework/zend-diactoros": "^1.4",
+                "zendframework/zend-servicemanager": "^3.3"
             },
             "require-dev": {
                 "phpunit/phpcov": "^4.0",
-                "phpunit/phpunit": "^6.0",
+                "phpunit/phpunit": "^6.2",
                 "satooshi/php-coveralls": "~1.0",
-                "squizlabs/php_codesniffer": "^2.0",
-                "symfony/http-foundation": "^3.2"
+                "squizlabs/php_codesniffer": "^2.9",
+                "symfony/http-foundation": "^3.3"
             },
             "type": "framework",
             "autoload": {
@@ -329,7 +328,7 @@
                 "micro framework",
                 "twig"
             ],
-            "time": "2017-07-16T06:29:39+00:00"
+            "time": "2017-07-20T09:25:16+00:00"
         },
         {
             "name": "selami/router",
@@ -486,7 +485,7 @@
         },
         {
             "name": "symfony/console",
-            "version": "v3.3.4",
+            "version": "v3.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
@@ -555,7 +554,7 @@
         },
         {
             "name": "symfony/debug",
-            "version": "v3.3.4",
+            "version": "v3.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
@@ -611,16 +610,16 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v3.3.4",
+            "version": "v3.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "f347a5f561b03db95ed666959db42bbbf429b7e5"
+                "reference": "e307abe4b79ccbbfdced9b91c132fd128f456bc5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/f347a5f561b03db95ed666959db42bbbf429b7e5",
-                "reference": "f347a5f561b03db95ed666959db42bbbf429b7e5",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/e307abe4b79ccbbfdced9b91c132fd128f456bc5",
+                "reference": "e307abe4b79ccbbfdced9b91c132fd128f456bc5",
                 "shasum": ""
             },
             "require": {
@@ -660,7 +659,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2017-06-24T09:29:48+00:00"
+            "time": "2017-07-17T14:07:10+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -723,16 +722,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v3.3.4",
+            "version": "v3.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "5ab8949b682b1bf9d4511a228b5e045c96758c30"
+                "reference": "07432804942b9f6dd7b7377faf9920af5f95d70a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/5ab8949b682b1bf9d4511a228b5e045c96758c30",
-                "reference": "5ab8949b682b1bf9d4511a228b5e045c96758c30",
+                "url": "https://api.github.com/repos/symfony/process/zipball/07432804942b9f6dd7b7377faf9920af5f95d70a",
+                "reference": "07432804942b9f6dd7b7377faf9920af5f95d70a",
                 "shasum": ""
             },
             "require": {
@@ -768,7 +767,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2017-07-03T08:12:02+00:00"
+            "time": "2017-07-13T13:05:09+00:00"
         },
         {
             "name": "twig/extensions",
@@ -891,66 +890,6 @@
                 "templating"
             ],
             "time": "2017-06-07T18:47:58+00:00"
-        },
-        {
-            "name": "zendframework/zend-config",
-            "version": "3.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zendframework/zend-config.git",
-                "reference": "a12e4a592bf66d9629b84960e268f3752e53abe4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-config/zipball/a12e4a592bf66d9629b84960e268f3752e53abe4",
-                "reference": "a12e4a592bf66d9629b84960e268f3752e53abe4",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "php": "^5.6 || ^7.0",
-                "psr/container": "^1.0",
-                "zendframework/zend-stdlib": "^2.7.7 || ^3.1"
-            },
-            "conflict": {
-                "container-interop/container-interop": "<1.2.0"
-            },
-            "require-dev": {
-                "malukenho/docheader": "^0.1.5",
-                "phpunit/phpunit": "^5.7 || ^6.0",
-                "zendframework/zend-coding-standard": "~1.0.0",
-                "zendframework/zend-filter": "^2.7.1",
-                "zendframework/zend-i18n": "^2.7.3",
-                "zendframework/zend-servicemanager": "^2.7.8 || ^3.2.1"
-            },
-            "suggest": {
-                "zendframework/zend-filter": "^2.7.1; install if you want to use the Filter processor",
-                "zendframework/zend-i18n": "^2.7.3; install if you want to use the Translator processor",
-                "zendframework/zend-servicemanager": "^2.7.8 || ^3.2.1; if you need an extensible plugin manager for use with the Config Factory"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.1-dev",
-                    "dev-develop": "3.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Zend\\Config\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "provides a nested object property based user interface for accessing this configuration data within application code",
-            "homepage": "https://github.com/zendframework/zend-config",
-            "keywords": [
-                "config",
-                "zf2"
-            ],
-            "time": "2017-02-22T14:31:10+00:00"
         },
         {
             "name": "zendframework/zend-diactoros",
@@ -2907,16 +2846,16 @@
         },
         {
             "name": "symfony/browser-kit",
-            "version": "v3.3.4",
+            "version": "v3.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/browser-kit.git",
-                "reference": "3a4435e79a8401746e8525e98039199d0924b4e5"
+                "reference": "8079a6b3668ef15cdbf73a4c7d31081abb8bb5f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/browser-kit/zipball/3a4435e79a8401746e8525e98039199d0924b4e5",
-                "reference": "3a4435e79a8401746e8525e98039199d0924b4e5",
+                "url": "https://api.github.com/repos/symfony/browser-kit/zipball/8079a6b3668ef15cdbf73a4c7d31081abb8bb5f0",
+                "reference": "8079a6b3668ef15cdbf73a4c7d31081abb8bb5f0",
                 "shasum": ""
             },
             "require": {
@@ -2960,11 +2899,11 @@
             ],
             "description": "Symfony BrowserKit Component",
             "homepage": "https://symfony.com",
-            "time": "2017-06-24T09:29:48+00:00"
+            "time": "2017-07-12T13:03:20+00:00"
         },
         {
             "name": "symfony/css-selector",
-            "version": "v3.3.4",
+            "version": "v3.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
@@ -3017,7 +2956,7 @@
         },
         {
             "name": "symfony/dom-crawler",
-            "version": "v3.3.4",
+            "version": "v3.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dom-crawler.git",
@@ -3073,7 +3012,7 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v3.3.4",
+            "version": "v3.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
@@ -3136,7 +3075,7 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v3.3.4",
+            "version": "v3.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -3185,7 +3124,7 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.3.4",
+            "version": "v3.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",

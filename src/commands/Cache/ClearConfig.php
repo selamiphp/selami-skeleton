@@ -6,7 +6,6 @@ namespace SelamiApp\Command\Cache;
 use Selami\Console\Command as SelamiCommand;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Zend\Config\Config;
 use Symfony\Component\Console\Exception\InvalidArgumentException;
 
 class ClearConfig extends SelamiCommand

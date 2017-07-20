@@ -6,7 +6,6 @@ namespace SelamiApp\Command\Cache;
 use Selami\Console\Command as SelamiCommand;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Zend\Config\Config;
 use Symfony\Component\Console\Exception\InvalidArgumentException;
 
 class ClearRouteDispatcherData extends SelamiCommand
@@ -27,8 +26,8 @@ class ClearRouteDispatcherData extends SelamiCommand
      */
     protected function execute(InputInterface $input, OutputInterface $output) : void
     {
-        $config = $this->container->get(Config::class);
-        $routeCacheFile = $config->app->get('cache_file', '');
+        $config = $this->container->get('config');
+        $routeCacheFile = $config['app']['cache_file'] ?? '';
         $unlinkResult  =  file_exists((string) $routeCacheFile)
             ? unlink($routeCacheFile) ? 'deleted.' : 'could\'t deleted'
             : 'does not exist!';

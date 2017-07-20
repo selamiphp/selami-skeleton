@@ -5,9 +5,7 @@ use Zend\Stdlib\ArrayUtils;
 use Zend\Stdlib\Glob;
 
 $siteBasedConfig = '';
-if (defined('RUNTIME_PLATFORM')) {
-    $siteBasedConfig = RUNTIME_PLATFORM.'_';
-}
+
 if (defined('RUNTIME_LANG')) {
     $siteBasedConfig .= RUNTIME_LANG.'_';
 }
@@ -20,9 +18,6 @@ if (is_file($cachedConfigFile)) {
 } else {
     foreach (Glob::glob(__DIR__ . '/autoload/{{,*.}global,{,*.}local}.php', Glob::GLOB_BRACE) as $file) {
         $config = ArrayUtils::merge($config, include $file);
-    }
-    if (defined('RUNTIME_PLATFORM')) {
-        $config = ArrayUtils::merge($config, include __DIR__ . '/sites/'.RUNTIME_PLATFORM.'.config.php');
     }
 
     if (defined('RUNTIME_LANG')) {

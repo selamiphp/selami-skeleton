@@ -12,7 +12,7 @@ composer create-project selami/selami-skeleton myApp
 
 ```bash
 cd myApp
-bin/console server:run --public=public
+bin/console server:run
 ```
 
 ### Available routes with the default installation:

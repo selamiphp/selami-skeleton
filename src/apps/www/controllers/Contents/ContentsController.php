@@ -17,5 +17,4 @@ abstract class ContentsController extends Application
         $this->request = $request;
         $this->args = $args;
     }
-
 }

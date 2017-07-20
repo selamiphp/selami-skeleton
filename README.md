@@ -12,13 +12,13 @@ composer create-project selami/selami-skeleton myApp
 
 ```bash
 cd myApp
-bin/console server:run --public=public/site1
+bin/console server:run --public=public
 ```
 
 ### Available routes with the default installation:
 
 * http://127.0.0.1:8080/
-* http://127.0.0.1:8080/category/test-category-slug
-* http://127.0.0.1:8080/2017/05/test-json-slug
+* http://127.0.0.1:8080/en/category/test-category-slug
+* http://127.0.0.1:8080/en/2017/05/test-json-slug
 
 

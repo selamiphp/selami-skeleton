@@ -1,0 +1,12 @@
+<?php
+declare(strict_types=1);
+
+return [
+    'view' => [
+        'type' => 'twig',
+        'twig' => [
+            'cache' => './cache/twig',
+            'debug' => false,
+        ]
+    ]
+];

@@ -3,11 +3,12 @@ declare(strict_types=1);
 
 return [
     'commands' => [
-        SelamiApp\Command\Info::class,
-        SelamiApp\Command\Server\ServerRun::class,
+        Selami\Command\Info::class,
+        Selami\Command\Server\ServerRun::class,
         // Cache Commands
-        SelamiApp\Command\Cache\ClearAll::class,
-        SelamiApp\Command\Cache\ClearConfig::class,
-        SelamiApp\Command\Cache\ClearRouteDispatcherData::class
+        Selami\Command\Cache\ClearAll::class,
+        Selami\Command\Cache\ClearConfig::class,
+        Selami\Command\Cache\ClearRouteDispatcherData::class,
+        Selami\Command\Cache\ClearViewData::class
     ]
 ];

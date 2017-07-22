@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "14521d57b505a06d054adebfddfd4f56",
+    "content-hash": "117e32d33b4f7ce77933b1c24bd72d9d",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -227,6 +227,42 @@
             "time": "2016-10-10T12:19:37+00:00"
         },
         {
+            "name": "selami/commands",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/selamiphp/commands.git",
+                "reference": "4e601a4538245ee171dc2e6ad183c813f0b433b9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/selamiphp/commands/zipball/4e601a4538245ee171dc2e6ad183c813f0b433b9",
+                "reference": "4e601a4538245ee171dc2e6ad183c813f0b433b9",
+                "shasum": ""
+            },
+            "require": {
+                "selami/console": "^0.2.2",
+                "symfony/process": "~3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Selami\\Command\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mehmet Korkmaz",
+                    "email": "mehmet@mkorkmaz.com"
+                }
+            ],
+            "time": "2017-07-22T22:59:45+00:00"
+        },
+        {
             "name": "selami/console",
             "version": "0.2.2",
             "source": {
@@ -273,16 +309,16 @@
         },
         {
             "name": "selami/foundation",
-            "version": "0.10",
+            "version": "0.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/selamiphp/foundation.git",
-                "reference": "008a64d8245885cfa626f733d8d01ad606529046"
+                "reference": "6d3ffdeea10fb742513e96460a98e47bc62cf74c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/selamiphp/foundation/zipball/008a64d8245885cfa626f733d8d01ad606529046",
-                "reference": "008a64d8245885cfa626f733d8d01ad606529046",
+                "url": "https://api.github.com/repos/selamiphp/foundation/zipball/6d3ffdeea10fb742513e96460a98e47bc62cf74c",
+                "reference": "6d3ffdeea10fb742513e96460a98e47bc62cf74c",
                 "shasum": ""
             },
             "require": {
@@ -290,7 +326,7 @@
                 "psr/container": "^1.0",
                 "selami/router": "^0.6",
                 "selami/stdlib": "^1.3",
-                "selami/views": "~0.4",
+                "selami/views": "~0.6",
                 "zendframework/zend-diactoros": "^1.4",
                 "zendframework/zend-servicemanager": "^3.3"
             },
@@ -328,7 +364,7 @@
                 "micro framework",
                 "twig"
             ],
-            "time": "2017-07-20T09:25:16+00:00"
+            "time": "2017-07-22T00:34:23+00:00"
         },
         {
             "name": "selami/router",
@@ -420,16 +456,16 @@
         },
         {
             "name": "selami/views",
-            "version": "0.4.2",
+            "version": "0.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/selamiphp/views.git",
-                "reference": "90104fe2e6cf4d39e03def92917c98fbcfc508e7"
+                "reference": "c9734fa625a4e5154f273d2802c1015533c169a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/selamiphp/views/zipball/90104fe2e6cf4d39e03def92917c98fbcfc508e7",
-                "reference": "90104fe2e6cf4d39e03def92917c98fbcfc508e7",
+                "url": "https://api.github.com/repos/selamiphp/views/zipball/c9734fa625a4e5154f273d2802c1015533c169a3",
+                "reference": "c9734fa625a4e5154f273d2802c1015533c169a3",
                 "shasum": ""
             },
             "require": {
@@ -481,7 +517,51 @@
                 "twig",
                 "view"
             ],
-            "time": "2017-07-15T16:09:48+00:00"
+            "time": "2017-07-22T00:20:21+00:00"
+        },
+        {
+            "name": "selami/zend-servicemanager-factories",
+            "version": "0.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/selamiphp/zend-servicemanager-factories.git",
+                "reference": "2d599c461374b39ad4dc428d102108691a5e36d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/selamiphp/zend-servicemanager-factories/zipball/2d599c461374b39ad4dc428d102108691a5e36d3",
+                "reference": "2d599c461374b39ad4dc428d102108691a5e36d3",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "selami/foundation": "^0.9",
+                "selami/router": "^0.6",
+                "selami/views": "^0.4",
+                "symfony/http-foundation": "^3.3",
+                "zendframework/zend-diactoros": "^1.4",
+                "zendframework/zend-servicemanager": "^3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Selami\\Factories\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mehmet Korkmaz",
+                    "email": "mehmet@mkorkmaz.com"
+                }
+            ],
+            "description": "Predefined factories to used with Zend Service Manager and Selami",
+            "time": "2017-07-22T22:14:45+00:00"
         },
         {
             "name": "symfony/console",
@@ -1209,32 +1289,32 @@
         },
         {
             "name": "doctrine/instantiator",
-            "version": "1.0.5",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/instantiator.git",
-                "reference": "8e884e78f9f0eb1329e445619e04456e64d8051d"
+                "reference": "185b8868aa9bf7159f5f953ed5afb2d7fcdc3bda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/8e884e78f9f0eb1329e445619e04456e64d8051d",
-                "reference": "8e884e78f9f0eb1329e445619e04456e64d8051d",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/185b8868aa9bf7159f5f953ed5afb2d7fcdc3bda",
+                "reference": "185b8868aa9bf7159f5f953ed5afb2d7fcdc3bda",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3,<8.0-DEV"
+                "php": "^7.1"
             },
             "require-dev": {
                 "athletic/athletic": "~0.1.8",
                 "ext-pdo": "*",
                 "ext-phar": "*",
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "~2.0"
+                "phpunit/phpunit": "^6.2.3",
+                "squizlabs/php_codesniffer": "^3.0.2"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.2.x-dev"
                 }
             },
             "autoload": {
@@ -1259,7 +1339,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2015-06-14T21:17:01+00:00"
+            "time": "2017-07-22T11:58:36+00:00"
         },
         {
             "name": "facebook/webdriver",
@@ -3270,7 +3350,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "selami/commands": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

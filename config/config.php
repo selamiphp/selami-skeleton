@@ -19,12 +19,13 @@ if (is_file($cachedConfigFile)) {
     foreach (Glob::glob(__DIR__ . '/autoload/{{,*.}global,{,*.}local}.php', Glob::GLOB_BRACE) as $file) {
         $config = ArrayUtils::merge($config, include $file);
     }
-
     if (defined('RUNTIME_LANG')) {
-        $config = ArrayUtils::merge($config, include __DIR__ . '/lang/' . RUNTIME_LANG . '.php');
+        $config['view'] = ArrayUtils::merge($config['view'], include __DIR__ . '/lang/' . RUNTIME_LANG . '.php');
     }
+
     if (isset($config['config_cache_enabled']) && $config['config_cache_enabled'] === true) {
         file_put_contents($cachedConfigFile, json_encode($config));
     }
 }
+
 return $config;

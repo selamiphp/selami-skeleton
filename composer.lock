@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "117e32d33b4f7ce77933b1c24bd72d9d",
+    "content-hash": "c38b06aad2f4e714c2ee7178bc409f2d",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -228,7 +228,7 @@
         },
         {
             "name": "selami/commands",
-            "version": "dev-master",
+            "version": "0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/selamiphp/commands.git",
@@ -521,25 +521,29 @@
         },
         {
             "name": "selami/zend-servicemanager-factories",
-            "version": "0.1.3",
+            "version": "0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/selamiphp/zend-servicemanager-factories.git",
-                "reference": "2d599c461374b39ad4dc428d102108691a5e36d3"
+                "reference": "560f7eb37a5ef6e269dc2af7aac2f5b000029a4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/selamiphp/zend-servicemanager-factories/zipball/2d599c461374b39ad4dc428d102108691a5e36d3",
-                "reference": "2d599c461374b39ad4dc428d102108691a5e36d3",
+                "url": "https://api.github.com/repos/selamiphp/zend-servicemanager-factories/zipball/560f7eb37a5ef6e269dc2af7aac2f5b000029a4e",
+                "reference": "560f7eb37a5ef6e269dc2af7aac2f5b000029a4e",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1"
             },
             "require-dev": {
+                "doctrine/dbal": "^2.6",
+                "mongodb/mongodb": "^1.1",
                 "selami/foundation": "^0.9",
                 "selami/router": "^0.6",
                 "selami/views": "^0.4",
+                "soupmix/mongodb": "^0.8",
+                "soupmix/sql": "^0.8",
                 "symfony/http-foundation": "^3.3",
                 "zendframework/zend-diactoros": "^1.4",
                 "zendframework/zend-servicemanager": "^3.3"
@@ -561,7 +565,7 @@
                 }
             ],
             "description": "Predefined factories to used with Zend Service Manager and Selami",
-            "time": "2017-07-22T22:14:45+00:00"
+            "time": "2017-07-23T16:12:47+00:00"
         },
         {
             "name": "symfony/console",
@@ -3350,9 +3354,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "selami/commands": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

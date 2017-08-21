@@ -1,0 +1,11 @@
+<?php
+declare(strict_types=1);
+use Selami\Factories;
+use Symfony\Component\HttpFoundation\Session\Session;
+return [
+    'dependencies' => [
+        'factories' => [
+            Session::class => Factories\SymfonySessionFactory::class,
+        ],
+    ]
+];

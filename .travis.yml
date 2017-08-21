@@ -10,7 +10,7 @@ before_script:
     - cp config/autoload/local.php.dist config/autoload/local.php
     - cp config/autoload/view.local.php.dist config/autoload/view.local.php
     - cp config/autoload/commands.local.php.dist config/autoload/commands.local.php
-
+    - cp config/autoload/dependencies.local.php.dist config/autoload/dependencies.local.php
     - composer install -o --prefer-dist
     - php -S 127.0.0.1:8080 -t public >/dev/null 2>&1 &
 

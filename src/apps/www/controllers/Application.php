@@ -11,13 +11,10 @@ use Psr\Http\Message\ServerRequestInterface;
 abstract class Application
 {
     /**
-     * @var Container
-     */
-    protected $container;
-    /**
      * @var array
      */
     protected $args;
+
     /**
      * @var SymfonySession
      */

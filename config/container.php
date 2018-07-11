@@ -14,8 +14,6 @@ $container = new ServiceManager($config['dependencies']);
 if (isset($routes)) {
     $container->setService('routes', $routes);
 }
-
-
 $container->setService('config', $config);
 $container->setService('globals', $globals);
 $container->setService('commands', $config['commands']);

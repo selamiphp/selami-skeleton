@@ -2,9 +2,9 @@
 declare(strict_types=1);
 
 
-namespace SelamiApp\Controller\Contents;
+namespace Selami\App\Controller\Contents;
 
-use SelamiApp\Controller\Application;
+use Selami\App\Controller\Application;
 use Psr\Http\Message\ServerRequestInterface;
 use Symfony\Component\HttpFoundation\Session\Session;
 

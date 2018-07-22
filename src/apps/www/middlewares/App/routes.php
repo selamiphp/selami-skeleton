@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-use SelamiApp\Controller;
+use Selami\App\Controller;
 use Selami\Router;
 
 return [

@@ -11,9 +11,6 @@ if (PHP_SAPI !== 'cli') {
     $config['app']['base_url'] = BaseUrlExtractor::getBaseUrl($_SERVER);
 }
 $container = new ServiceManager($config['dependencies']);
-if (isset($routes)) {
-    $container->setService('routes', $routes);
-}
 $container->setService('config', $config);
 $container->setService('globals', $globals);
 $container->setService('commands', $config['commands']);

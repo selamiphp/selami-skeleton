@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace SelamiApp\Controller\Contents;
+namespace Selami\App\Controller\Contents;
 
 use Selami\Interfaces\Application;
 

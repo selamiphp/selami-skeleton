@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 
-namespace Selami\Auth\Controller;
+namespace Selami\Authentication\Controller;
 
 use Symfony\Component\HttpFoundation\Session\Session as SymfonySession;
 use Selami\Helper;

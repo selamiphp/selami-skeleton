@@ -422,16 +422,16 @@
         },
         {
             "name": "selami/foundation",
-            "version": "0.11.1",
+            "version": "0.11.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/selamiphp/foundation.git",
-                "reference": "52ce1a74c28d3d909ccb577a681d47cef0d0a55b"
+                "reference": "abbd348a2fe07fa31bb02c596d4575947d2273fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/selamiphp/foundation/zipball/52ce1a74c28d3d909ccb577a681d47cef0d0a55b",
-                "reference": "52ce1a74c28d3d909ccb577a681d47cef0d0a55b",
+                "url": "https://api.github.com/repos/selamiphp/foundation/zipball/abbd348a2fe07fa31bb02c596d4575947d2273fd",
+                "reference": "abbd348a2fe07fa31bb02c596d4575947d2273fd",
                 "shasum": ""
             },
             "require": {
@@ -477,7 +477,7 @@
                 "micro framework",
                 "twig"
             ],
-            "time": "2018-07-21T16:23:11+00:00"
+            "time": "2018-07-23T03:36:25+00:00"
         },
         {
             "name": "selami/router",
@@ -632,16 +632,16 @@
         },
         {
             "name": "selami/zend-servicemanager-factories",
-            "version": "0.6.5",
+            "version": "0.6.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/selamiphp/zend-servicemanager-factories.git",
-                "reference": "05cde89e0fd6ae4db49e0171dd67a232e150c4f7"
+                "reference": "9ad157c76395d601fc28e50c7c873212aae7a2d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/selamiphp/zend-servicemanager-factories/zipball/05cde89e0fd6ae4db49e0171dd67a232e150c4f7",
-                "reference": "05cde89e0fd6ae4db49e0171dd67a232e150c4f7",
+                "url": "https://api.github.com/repos/selamiphp/zend-servicemanager-factories/zipball/9ad157c76395d601fc28e50c7c873212aae7a2d3",
+                "reference": "9ad157c76395d601fc28e50c7c873212aae7a2d3",
                 "shasum": ""
             },
             "require": {
@@ -668,7 +668,7 @@
                 }
             ],
             "description": "Predefined factories to used with Zend Service Manager and Selami",
-            "time": "2018-07-22T11:34:27+00:00"
+            "time": "2018-07-23T06:35:36+00:00"
         },
         {
             "name": "symfony/console",

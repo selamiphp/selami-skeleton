@@ -10,6 +10,7 @@ use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use Zend\Diactoros\Response;
 use Psr\Container\ContainerInterface;
+use Selami\Foundation\App as SelamiApplication;
 
 class Middleware implements MiddlewareInterface
 {
@@ -24,8 +25,11 @@ class Middleware implements MiddlewareInterface
     {
         $appRoutes = require __DIR__ . '/routes.php';
         $this->container->setService('routes', $appRoutes);
+        //$config = $this->container->get('config');
+        //$config['app']['cache_file'] = './cache/application.fastroute.cache';
+        //$this->container->setService('config', $config);
         $this->container->setService(ServerRequestInterface::class, $request);
-        $myApp = $this->container->get('SelamiApplication');
+        $myApp = $this->container->get(SelamiApplication::class);
         return $myApp($request, new Response());
     }
 

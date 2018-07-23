@@ -2,13 +2,13 @@
 declare(strict_types=1);
 
 
-namespace Selami\Auth\Controller\Auth;
+namespace Selami\Authentication\Controller\Authentication;
 
-use Selami\Auth\Controller\Application;
+use Selami\Authentication\Controller\Application;
 use Psr\Http\Message\ServerRequestInterface;
 use Symfony\Component\HttpFoundation\Session\Session;
 
-abstract class AuthController extends Application
+abstract class AuthenticationController extends Application
 {
 
     public function __construct(ServerRequestInterface $request, Session $session, ?array $args)

@@ -33,7 +33,7 @@
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "Selami\\Auth\\Controller\\": "src/apps/www/middlewares/Auth/controllers",
+            "Selami\\Authentication\\Controller\\": "src/apps/www/middlewares/Authentication/controllers",
             "Selami\\App\\Controller\\": "src/apps/www/middlewares/App/controllers",
             "Selami\\Middleware\\": "src/apps/www/middlewares",
             "Selami\\AppFactories\\": "src/factories",

@@ -13,6 +13,7 @@ abstract class ContentsController extends Application
 
     public function __construct(ServerRequestInterface $request, Session $session, ?array $args)
     {
+
         $this->session = $session;
         $this->request = $request;
         $this->args = $args;
